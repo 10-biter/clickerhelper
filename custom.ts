@@ -20,7 +20,24 @@ namespace custom {
      */
     //% block
     export function create_clicker_sprite(): void {
-        
+        let mySprite = sprites.create(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`, SpriteKind.Player)
     }
 
     /**
@@ -31,4 +48,8 @@ namespace custom {
     export function fib(value: number): number {
         return value <= 1 ? value : fib(value -1) + fib(value - 2);
     }
+    controller.A.onEvent(ControllerButtonEvent.Pressed, function() {
+        music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.InBackground)
+        info.changeScoreBy(1)
+    })
 }
