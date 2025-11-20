@@ -20,7 +20,8 @@ namespace Clicker {
      */
     //% block
     export function create_clicker_sprite(): void {
-        let mySprite = sprites.create(img`
+        let make = "yes"
+        let mysprite = sprites.create(img`
             . . . . . . . 6 . . . . . . . .
             . . . . . . 8 6 6 . . . 6 8 . .
             . . . e e e 8 8 6 6 . 6 7 8 . .
@@ -49,7 +50,13 @@ namespace Clicker {
         return value <= 1 ? value : fib(value -1) + fib(value - 2);
     }
     controller.A.onEvent(ControllerButtonEvent.Pressed, function() {
-        music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.InBackground)
-        info.changeScoreBy(1)
+        if (Math.percentChance(50)) {
+            music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.InBackground)
+            info.changeScoreBy(1)
+        }    
     })
+
+
+
+        
 }
