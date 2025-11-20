@@ -11,7 +11,7 @@
  * Custom blocks
  */
 //% weight=100 color=#961759 icon="\uf3a5"
-namespace custom {
+namespace Clicker {
     /**
      * TODO: describe your function here
      * @param n describe parameter here, eg: 5
