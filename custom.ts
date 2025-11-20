@@ -10,7 +10,7 @@
 /**
  * Custom blocks
  */
-//% weight=100 color=#0fbc11 icon=""
+//% weight=100 color=#961759 icon="\uf3a5"
 namespace custom {
     /**
      * TODO: describe your function here
